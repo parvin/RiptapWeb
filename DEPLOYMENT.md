@@ -4,7 +4,7 @@
 
 ### 1. Create the Repository
 1. Go to [github.com/new](https://github.com/new)
-2. Name the repo (e.g., `riptap-web` or `riptap.com`)
+2. Name the repo (e.g., `riptap-web`)
 3. Set visibility to **Public** (required for free GitHub Pages)
 4. Do **not** initialize with README (you already have files)
 
@@ -30,32 +30,33 @@ The `CNAME` file in the repo will automatically configure the custom domain.
 
 ---
 
-## GoDaddy DNS Configuration
+## Cloudflare DNS Configuration
+
+The domain `riptap.app` is registered with GoDaddy, but its nameservers point to Cloudflare, so all DNS records are managed in Cloudflare.
 
 ### 1. Open DNS Management
-1. Log in to [GoDaddy](https://www.godaddy.com)
-2. Go to **My Products > riptap.com > DNS**
+1. Log in to [Cloudflare](https://dash.cloudflare.com)
+2. Select **riptap.app**, then go to **DNS > Records**
 
 ### 2. Configure A Records
 Remove any existing A records for `@`, then add these four:
 
-| Type | Name | Value             | TTL    |
-|------|------|-------------------|--------|
-| A    | @    | 185.199.108.153   | 600    |
-| A    | @    | 185.199.109.153   | 600    |
-| A    | @    | 185.199.110.153   | 600    |
-| A    | @    | 185.199.111.153   | 600    |
+| Type | Name | Value             | Proxy status | TTL    |
+|------|------|-------------------|--------------|--------|
+| A    | @    | 185.199.108.153   | Proxied      | Auto   |
+| A    | @    | 185.199.109.153   | Proxied      | Auto   |
+| A    | @    | 185.199.110.153   | Proxied      | Auto   |
+| A    | @    | 185.199.111.153   | Proxied      | Auto   |
 
 ### 3. Configure CNAME Record for www
-| Type  | Name | Value                      | TTL    |
-|-------|------|----------------------------|--------|
-| CNAME | www  | `<USERNAME>.github.io`     | 600    |
-
-Replace `<USERNAME>` with your GitHub username.
+| Type  | Name | Value                      | Proxy status | TTL    |
+|-------|------|----------------------------|--------------|--------|
+| CNAME | www  | `parvin.github.io`         | Proxied      | Auto   |
 
 ### 4. Wait for DNS Propagation
 - Usually takes a few minutes, can take up to 48 hours
-- Check status: `dig riptap.com +short`
+- Check status: `dig riptap.app +short`
+- Any IP addresses returned confirm DNS resolves. Because the records are proxied, these will be Cloudflare IPs rather than the GitHub Pages `185.199.x.x` addresses.
 
 ### 5. Enable HTTPS
 1. Go to repo **Settings > Pages**
@@ -66,8 +67,8 @@ Replace `<USERNAME>` with your GitHub username.
 
 ## Verification Checklist
 
-- [ ] `https://riptap.com` loads the landing page
-- [ ] `https://www.riptap.com` redirects to the site
+- [ ] `https://riptap.app` loads the landing page
+- [ ] `https://www.riptap.app` redirects to the site
 - [ ] Navigation links work across all pages
 - [ ] Mobile hamburger menu works
 - [ ] Carousel auto-rotates and dot navigation works

@@ -1,6 +1,6 @@
 # Riptap Website
 
-Landing page for [Riptap](https://riptap.com) — a minimalist rhythm-reaction game for iOS.
+Landing page for [Riptap](https://riptap.app) — a minimalist rhythm-reaction game for iOS.
 
 ## Structure
 
@@ -25,4 +25,4 @@ open index.html
 
 ## Deployment
 
-Hosted on GitHub Pages at [riptap.com](https://riptap.com). See [DEPLOYMENT.md](DEPLOYMENT.md) for setup instructions.
+Hosted on GitHub Pages at [riptap.app](https://riptap.app). See [DEPLOYMENT.md](DEPLOYMENT.md) for setup instructions.
