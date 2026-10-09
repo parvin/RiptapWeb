@@ -72,7 +72,7 @@
       <p>Riptap does not show banner ads or ads that interrupt gameplay. The only ads are optional rewarded video ads: when you miss after scoring at least 10 points, you can choose to watch an ad to continue your run, once per run. You can always choose "End Game" instead. If no ad is available, you can continue for free.</p>
       <p>Rewarded ads are provided by Google AdMob. To deliver ads and measure their performance, Google may collect information such as your device type, IP address, approximate location and interactions with ads, as described in <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">How Google uses information from sites or apps that use its services</a> and the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
       <p>Where required by law, for example in the European Economic Area, the UK and Switzerland, Google's consent message lets you choose how your data is used for advertising before ads are requested. Your choices are stored on your device. When required, you can change them at any time under <strong>Settings &rsaquo; Privacy Choices</strong> in the app.</p>
-      <p>Riptap does not ask for permission to track you across other companies' apps and websites (Apple's App Tracking Transparency), so iOS does not give Riptap or its advertising partners your device's advertising identifier.</p>
+      <p>Riptap does not request permission to track you across other companies' apps and websites using Apple's App Tracking Transparency framework. Riptap does not use the advertising identifier (IDFA) for its own analytics. Google AdMob's data practices are described in the Google privacy information linked above.</p>
       <p>Google's advertising consent choices are separate from Riptap's own analytics and crash report settings described below. Agreeing to advertising does not turn on analytics or crash reports.</p>
 
       <h2>In-App Purchases</h2>
@@ -98,16 +98,16 @@
 
       <h2>Turning a setting off</h2>
       <ul>
-        <li>Turning off <strong>Share usage analytics</strong> immediately stops future analytics collection and clears the analytics data stored on your device.</li>
+        <li>Turning off <strong>Share usage analytics</strong> stops future analytics collection and resets locally stored Firebase Analytics data using Firebase's supported controls. Some technical files or identifiers used by Google software may remain on your device.</li>
         <li>Turning off <strong>Share crash reports</strong> immediately stops future crash reporting and deletes crash reports on your device that have not been sent.</li>
       </ul>
       <p>Turning a setting off does not automatically erase information that was already sent to Firebase. To ask about information that was already sent, contact us at the address below.</p>
 
       <h2>Data retention</h2>
-      <p>Information stored on your device remains until you change a setting, the app clears it, or you delete the app. Information sent to Google is kept according to Google's policies and Firebase settings. According to <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase's privacy documentation</a>, Crashlytics keeps crash reports and their associated identifiers for 90 days before starting to remove them. Advertising data is handled under the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
+      <p>Information stored on your device remains until you change a setting, the app clears it, or you delete the app. Information sent to Google is kept according to Google's policies and Firebase settings. <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase documents</a> a 90-day retention period for Crashlytics crash reports and associated identifiers. Actual deletion and other related data handling are governed by Google's retention practices. Advertising data is handled under the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
 
       <h2>Children's Privacy</h2>
-      <p>Riptap is not directed specifically to children under 13. We do not knowingly collect personal information directly from children. Because ads are provided by Google, Google may collect information as described above when an ad is shown. If you believe a child has provided personal information through Riptap, please contact us and we will look into it.</p>
+      <p>Riptap is not directed specifically to children under 13. We do not knowingly collect personal information directly from children. Because ads are provided by Google, Google may collect information as described above when an ad is shown, and Firebase may collect usage analytics or crash reports if those optional settings are turned on. If you believe a child has provided personal information through Riptap, please contact us and we will look into it.</p>
 
       <h2>More information</h2>
       <ul>
